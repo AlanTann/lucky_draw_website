@@ -243,6 +243,31 @@ class LuckyDrawController extends Controller
         return $users[0];
     }
 
+    public function getListOfLuckyNumberUser($user_id)
+    {
+        $user_winning_number = new UserWinningNumber();
+        $user_winning_info = $user_winning_number->where('user_id', $user_id)->get();
+
+        return $user_winning_info;
+    }
+
+    public function showMember(Request $req)
+    {
+        $member_id = $req->user()->id;
+
+        $admin_exist = $this->checkIfUserIsAdmin($member_id);
+
+        if($admin_exist > 0 )
+        {
+            return redirect('/result');
+        }
+
+        $user_lucky_info = $this->getListOfLuckyNumberUser($member_id)->toArray();
+
+        // show the form
+        return View::make('member', ['user_lucky_info' => $user_lucky_info]);
+    }
+
     public function showResult ()
     {
         $winning_result = $this->getWinnerName();

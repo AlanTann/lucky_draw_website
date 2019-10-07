@@ -34,6 +34,8 @@
 
     <button class="btn btn-primary" style="margin-top: 30px">DRAW</button>
 
+    <button class="btn btn-primary"" type="button" style="margin-top:30px; margin-left:40px" onclick="window.location='{{ url("logout") }}'">Logout</button>
+
     </form>
 
     <div style="margin-top: 30px">Result:

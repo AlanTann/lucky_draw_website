@@ -17,6 +17,8 @@ Route::get('logout', 'Auth\LoginController@logout');
 
 Route::post('login', 'Auth\LoginController@processLogin');
 
+Route::get('member', 'LuckyDrawController@showMember');
+
 Route::group(['middleware' => ['auth']], function() {
     Route::get('admin', 'AdminController@showAdmin');
     Route::post('draw', 'LuckyDrawController@drawWinner');

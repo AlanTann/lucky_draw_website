@@ -84,6 +84,8 @@ class LoginController extends Controller
                     return redirect('/admin');
                 }
 
+                return redirect ('/member');
+
                 // validation successful!
                 // redirect them to the secure section or whatever
                 // return Redirect::to('secure');
