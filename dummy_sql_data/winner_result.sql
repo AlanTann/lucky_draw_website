@@ -46,7 +46,7 @@ CREATE TABLE `winner_result` (
 --
 
 INSERT INTO `winner_result` (`id`, `grand_winner`, `second_first_winner`, `second_second_winner`, `third_first_winner`, `third_second_winner`, `third_third_winner`, `round`, `created_date`, `updated_date`) VALUES
-(15, 8888, 2354, NULL, NULL, NULL, NULL, NULL, '2019-10-06 14:14:07', '2019-10-06 15:30:45');
+(1, 8888, 2354, NULL, NULL, NULL, NULL, NULL, '2019-10-06 14:14:07', '2019-10-06 15:30:45');
 
 --
 -- Indexes for dumped tables
