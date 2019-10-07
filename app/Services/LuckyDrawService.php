@@ -33,6 +33,8 @@ class LuckyDrawService
                 if(!$user_id) {
                     return 'This lucky number does not belong to any user.';
                 }
+            } else {
+                return 'Please Insert a winning number.';
             }
 
             $user_winner = $this->checkIfUserIsWinner($winning_number);
@@ -42,7 +44,7 @@ class LuckyDrawService
             $clean_result = $this->cleanSpecificUserPrize($prize_type);
             $winner_result = $this->insertWinner($prize_type, $winning_number);
             $update_user_result = $this->updateUserWinningNumber($prize_type, $winning_number);
-            return 'Draw Successful';
+            return 'Draw Successful. Winning Number for '.$prize_type.': '.$winning_number;
         }
 
         if($prize_type == "grand_winner") {
@@ -57,7 +59,7 @@ class LuckyDrawService
         $update_user_result = $this->updateUserWinningNumber($prize_type, $winning_number);
         $winner_result = $this->insertWinner($prize_type, $winning_number);
 
-        return 'Draw Random Successful';
+        return 'Draw Random Successful. Winning Number for '.$prize_type.': '.$winning_number;
     }
 
     public function checkIfUserIsAdmin($user_id)
