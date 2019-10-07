@@ -11,9 +11,8 @@
 
     <div style="padding-top:50px; padding-left:50px">
 
-    <p>Member Page</p>
-
-    <p>My Lucky Number</p>
+    <h1>Member Page</h1>
+    <p style="font-weight:bold; font-size:20px">My Lucky Number</p>
 
     @if(isset($user_lucky_info))
         @foreach($user_lucky_info as $user_lucky)
