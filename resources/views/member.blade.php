@@ -9,6 +9,8 @@
 </head>
 <body>
 
+    <div style="padding-top:50px; padding-left:50px">
+
     <p>Member Page</p>
 
     <p>My Lucky Number</p>
@@ -22,6 +24,8 @@
     <p></p>
 
     <button class="btn btn-primary"" type="button" style="margin-top:20px" onclick="window.location='{{ url("logout") }}'">Logout</button>
+
+    </div>
 
 </body>
 </html>

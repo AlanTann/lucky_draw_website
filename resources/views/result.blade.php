@@ -5,6 +5,8 @@
 </head>
 <body>
 
+    <div style="padding-top:50px; padding-left:50px">
+
     <p>Result Page</p>
 
     <p>Grand Winner = 
@@ -42,5 +44,7 @@
             {{$winningResult['third_third_winner']}}
         @endif
     </p>
+
+    </div>
 </body>
 </html>

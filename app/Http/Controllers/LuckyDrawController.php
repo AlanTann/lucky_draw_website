@@ -41,13 +41,6 @@ class LuckyDrawController extends Controller
     {
         $member_id = $req->user()->id;
 
-        $admin_exist = $this->checkIfUserIsAdmin($member_id);
-
-        if($admin_exist > 0 )
-        {
-            return redirect('/result');
-        }
-
         $lucky_draw_service = New LuckyDrawService();
         $user_lucky_info = $lucky_draw_service->getListOfLuckyNumberUser($member_id)->toArray();
 

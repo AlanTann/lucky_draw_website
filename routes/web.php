@@ -15,13 +15,12 @@ Route::get('login', 'Auth\LoginController@showLogin');
 
 Route::get('logout', 'Auth\LoginController@logout');
 
-Route::post('login', 'Auth\LoginController@processLogin');
-
-Route::get('member', 'LuckyDrawController@showMember');
+Route::post('login', [ 'as' => 'login', 'uses' => 'Auth\LoginController@processLogin']);
 
 Route::group(['middleware' => ['auth']], function() {
     Route::get('admin', 'AdminController@showAdmin');
     Route::post('draw', 'LuckyDrawController@drawWinner');
+    Route::get('member', 'LuckyDrawController@showMember');
 });
 
 Route::get('result', 'LuckyDrawController@showResult');
