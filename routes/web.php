@@ -12,6 +12,7 @@
 */
 
 Route::get('login', 'Auth\LoginController@showLogin');
+Route::post('register', 'Auth\RegisterController@processRegister');
 
 Route::get('logout', 'Auth\LoginController@logout');
 
